@@ -14,7 +14,7 @@ const ENV_GITHUB_REDIRECT_URL = {
 };
 export const GITHUB_REDIRECT_URL = ENV_GITHUB_REDIRECT_URL[ENV];
 export const GITHUB_AUTH_TOKEN_KEY = 'gh_access_token';
-export const OPENDBC_SOURCE_REPO = 'commaai/opendbc';
+export const TESLADBC_SOURCE_REPO = 'boggyver/tesladbc';
 
 export const USE_UNLOGGER = typeof window !== 'undefined' && getUrlParameter('unlogger') !== null;
 export const UNLOGGER_HOST = 'http://localhost:8080/unlogger';

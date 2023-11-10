@@ -12,7 +12,7 @@ test('GithubDbcList successfully mounts with minimal default props', () => {
   const component = shallow(
     <GithubDbcList
       onDbcLoaded={() => {}}
-      repo="commaai/opendbc"
+      repo="boggyver/tesladbc"
       openDbcClient={openDbcClient}
     />
   );

@@ -19,8 +19,8 @@ export default class LoadDbcModal extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tab: 'OpenDBC',
-      tabs: ['OpenDBC', 'GitHub', 'Upload'],
+      tab: 'TeslaDBC',
+      tabs: ['TeslaDBC', 'Upload'],
       dbc: null,
       dbcSource: null,
       userOpenDbcRepo: null
@@ -73,11 +73,11 @@ export default class LoadDbcModal extends Component {
 
   renderTabContent() {
     const { tab } = this.state;
-    if (tab === 'OpenDBC') {
+    if (tab === 'TeslaDBC') {
       return (
         <GithubDbcList
           onDbcLoaded={this.onDbcLoaded}
-          repo="commaai/opendbc"
+          repo="boggyver/tesladbc"
           openDbcClient={this.props.openDbcClient}
         />
       );

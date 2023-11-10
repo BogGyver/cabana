@@ -1,12 +1,12 @@
 import GitHub from 'github-api';
 
-import { OPENDBC_SOURCE_REPO } from '../config';
+import { TESLA_SOURCE_REPO } from '../config';
 
-export default class OpenDBC {
+export default class TeslaDBC {
   constructor(token) {
     this.token = token;
     this.github = new GitHub({ token });
-    this.sourceRepo = this.github.getRepo('commaai', 'opendbc');
+    this.sourceRepo = this.github.getRepo('boggyver', 'tesladbc');
     this.githubUsername = null;
   }
 
@@ -41,7 +41,7 @@ export default class OpenDBC {
   async list(repoFullName) {
     /*
     Lists files in a github repository.
-    If no argument provided, assumes OpenDBC source repo
+    If no argument provided, assumes TeslaDBC source repo
     (commaai/opendbc)
     */
 
@@ -81,7 +81,7 @@ export default class OpenDBC {
 
   repoSourceIsOpenDbc(repoDetails) {
     return (
-      repoDetails.source && repoDetails.source.full_name === OPENDBC_SOURCE_REPO
+      repoDetails.source && repoDetails.source.full_name === TESLA_SOURCE_REPO
     );
   }
 
@@ -144,7 +144,7 @@ export default class OpenDBC {
     const commitResp = await repo.commit(
       headCommit.sha,
       createdTree.sha,
-      commitMessage || 'OpenDBC updates'
+      commitMessage || 'TeslaDBC updates'
     );
     const commit = commitResp.data;
 

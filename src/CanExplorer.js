@@ -507,7 +507,7 @@ export default class CanExplorer extends Component {
         if (this.state.dbcFilename === NEW_DBC) {
           const dbcFilename = DbcUtils.findDbcForCar(carParams.CarFingerprint);
           if (dbcFilename) {
-            this.openDbcClient.getDbcContents(dbcFilename + '.dbc', 'commaai/opendbc').then((dbcText) => {
+            this.openDbcClient.getDbcContents(dbcFilename + '.dbc', 'boggyver/tesladbc').then((dbcText) => {
               this.onDbcSelected(dbcFilename, new DBC(dbcText));
             });
           }
