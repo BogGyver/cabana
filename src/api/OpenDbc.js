@@ -81,7 +81,7 @@ export default class TeslaDBC {
 
   repoSourceIsOpenDbc(repoDetails) {
     return (
-      repoDetails.source && repoDetails.source.full_name === TESLA_SOURCE_REPO
+      repoDetails.source && repoDetails.source.full_name === TESLADBC_SOURCE_REPO
     );
   }
 
