@@ -1,6 +1,6 @@
 import GitHub from 'github-api';
 
-import { TESLA_SOURCE_REPO } from '../config';
+import { TESLADBC_SOURCE_REPO } from '../config';
 
 export default class TeslaDBC {
   constructor(token) {
